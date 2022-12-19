@@ -7,4 +7,12 @@ class MoveableObject {
     moveRight() {
         console.log('move right');        
     }
+
+    moveLeft() {
+        console.log('move left');
+    }
+
+    jump() {
+        console.log('jump');
+    }
 }
