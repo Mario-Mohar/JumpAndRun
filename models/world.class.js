@@ -6,6 +6,11 @@ class World {
         new Chickens (),
         new Chickens (),
     ];
+    clouds = [
+        new Clouds(),
+
+    ];
+    boss = new Boss();
     canvas;
     ctx;
 
@@ -26,6 +31,12 @@ class World {
         this.enemy.forEach((enemy) => {
             this.ctx.drawImage(enemy.img, enemy.x, enemy.y, enemy.width, enemy.height);
         });
+
+        this.clouds.forEach((cloud) => {
+            this.ctx.drawImage(cloud.img, cloud.x, cloud.y, cloud.width, cloud.height);
+        });
+
+        this.ctx.drawImage(this.boss.img, this.boss.x, this.boss.y, this.boss.width, this.boss.height); // Draw the world
 
         requestAnimationFrame(() => this.draw());
     }
