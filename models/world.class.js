@@ -25,7 +25,7 @@ class World { // The World class
 
 
 
-
+    //Draw wird immer wieder aufgerufen
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); // Clear the canvas before drawing
         this.ctx.drawImage(this.character.img, this.character.x, this.character.y, this.character.width, this.character.height); // Draw the world
