@@ -18,24 +18,6 @@ class World { // The World class
     constructor(canvas) { // The constructor is called when you create a new instance of the class
         this.ctx = canvas.getContext('2d'); // Get the context of the canvas needs to drwaw on it i 2d
         this.canvas = canvas; // Save the canvas in the class
-
-        // Load images and set up error handling
-        Promise.all([
-            this.character.loadImage(),
-            this.boss.loadImage(),
-            this.background.loadImage(),
-            // Load images for other game elements
-        ])
-        .then(() => {
-            this.draw();
-        })
-        .catch((error) => {
-            console.error('Error loading images:', error);
-        });
-
-
-
-
         this.draw(); // Start the draw loop
     }
 
